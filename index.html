@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Roman — Full-Stack Developer</title>
+    <meta
+        name="description"
+        content="Full-stack розробник. Вебзастосунки, booking-системи, backend і Telegram-боти."
+    >
+    
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Roman — Full-Stack Developer">
+    <meta property="og:description" content="Full-stack розробник. Вебзастосунки, booking-системи, backend і Telegram-боти.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="uk_UA">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Roman — Full-Stack Developer">
+    <meta name="twitter:description" content="Full-stack розробник. Вебзастосунки, booking-системи, backend і Telegram-боти.">
+
+    <!-- Add canonical and og:url once the production URL is confirmed.
+         Add og:image and twitter:image only for a dedicated social preview asset,
+         using its absolute production URL; then use summary_large_image. -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="header">
+        <a class="logo" href="#top" aria-label="На головну" data-i18n-aria="aria.home">
+            R<span>.</span>
+        </a>
+
+        <nav class="nav" id="nav">
+            <a href="#projects" data-i18n="nav.projects">Проєкти</a>
+            <a href="#about" data-i18n="nav.about">Про мене</a>
+            <a href="#contact" data-i18n="nav.contact">Контакти</a>
+        </nav>
+
+        <div class="language-switcher" role="group" aria-label="Мова сайту" data-i18n-aria="aria.language">
+            <button type="button" data-lang="ua" aria-pressed="true">UA</button>
+            <span aria-hidden="true">·</span>
+            <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+            <span aria-hidden="true">·</span>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            type="button"
+            aria-label="Відкрити меню" data-i18n-aria="aria.menu"
+            aria-expanded="false"
+            aria-controls="nav"
+        >
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+
+    <main id="top">
+
+        <!-- =========================
+             HERO
+        ========================== -->
+        <section class="hero">
+
+            <div class="hero-top">
+                <p class="eyebrow">
+                    FULL-STACK DEVELOPER
+                </p>
+
+                <p class="hero-year">
+                    2026
+                </p>
+            </div>
+
+            <div class="hero-title">
+                <h1>
+                    <span>ROMAN</span>
+                    <span>FULL-STACK</span>
+                    <span class="outline">DEVELOPER</span>
+                </h1>
+            </div>
+
+            <div class="hero-bottom">
+
+                <p class="hero-description" data-i18n="hero.description">
+                    Створюю вебсайти, системи онлайн-запису та Telegram-ботів —
+                    від інтерфейсу й backend-логіки до бази даних і production deployment.
+                </p>
+
+                <a class="circle-link" href="#projects" aria-label="Дивитися проєкти" data-i18n-aria="aria.projects">
+                    ↓
+                </a>
+
+            </div>
+
+            <div class="hero-line"></div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+        <section class="projects section" id="projects">
+
+            <div class="section-heading reveal">
+                <p class="eyebrow">SELECTED WORK</p>
+
+                <div class="section-heading-row">
+                    <h2 data-i18n="projects.title">Проєкти</h2>
+                    <span>03</span>
+                </div>
+            </div>
+
+
+            <!-- MANOR HOUSE -->
+            <article class="project project-featured reveal">
+
+                <div class="project-meta">
+                    <span>01</span>
+                    <span>BOOKING / CRM</span>
+                    <span>2026</span>
+                </div>
+
+                <a
+                    class="project-image"
+                    href="https://manor-house.onrender.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div class="project-placeholder manor-placeholder">
+                        <span>MANOR</span>
+                        <span>HOUSE</span>
+                    </div>
+
+                    <img
+                        loading="lazy" decoding="async" src="images/manor-house.webp" width="1774" height="887"
+                        alt="MANOR HOUSE — Barbershop Booking & CRM" data-i18n-alt="alt.manor"
+                    >
+
+                    <div class="project-image-overlay">
+                        <span data-i18n="projects.open">Відкрити проєкт ↗</span>
+                    </div>
+                </a>
+
+                <div class="project-content">
+
+                    <div>
+                        <p class="project-type">
+                            FULL-STACK WEB APPLICATION
+                        </p>
+
+                        <h3>MANOR HOUSE</h3>
+                    </div>
+
+                    <div class="project-info">
+
+                        <p data-i18n="projects.manor.description">
+                            Система онлайн-запису та керування барбершопом:
+                            публічний сайт, PostgreSQL, Telegram-сповіщення
+                            і захищена CRM для роботи з клієнтами,
+                            розкладом та аналітикою.
+                        </p>
+
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>PostgreSQL</span>
+                            <span>JavaScript</span>
+                            <span>Neon</span>
+                            <span>Telegram</span>
+                            <span>Render</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a
+                                href="https://manor-house.onrender.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                LIVE DEMO ↗
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- DRIVEFIX -->
+            <article class="project project-drivefix reveal">
+
+                <div class="project-meta">
+                    <span>02</span>
+                    <span>AUTO SERVICE</span>
+                    <span>2026</span>
+                </div>
+
+                <a
+                    class="project-image"
+                    href="https://romario15811.github.io/DRIVEFIX/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div class="project-placeholder drivefix-placeholder">
+                        <span>DRIVE</span>
+                        <span>FIX</span>
+                    </div>
+
+                    <img
+                        loading="lazy" decoding="async" src="images/drivefix.webp" width="1774" height="887"
+                        alt="DRIVEFIX — Auto Service Website" data-i18n-alt="alt.drivefix"
+                    >
+
+                    <div class="project-image-overlay">
+                        <span data-i18n="projects.open">Відкрити проєкт ↗</span>
+                    </div>
+                </a>
+
+                <div class="project-content">
+
+                    <div>
+                        <p class="project-type">
+                            FULL-STACK WEBSITE
+                        </p>
+
+                        <h3>DRIVEFIX</h3>
+                    </div>
+
+                    <div class="project-info">
+
+                        <p data-i18n="projects.drivefix.description">
+                            Сайт автосервісу з адаптивним інтерфейсом,
+                            backend API, серверною валідацією заявок
+                            і надсиланням нових звернень власнику через Telegram.
+                        </p>
+
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Telegram API</span>
+                        </div>
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://romario15811.github.io/DRIVEFIX/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                LIVE DEMO ↗
+                            </a>
+
+                            <a
+                                href="https://github.com/Romario15811/DRIVEFIX"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GITHUB ↗
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- SMARTSAVE -->
+            <article class="project project-smartsave reveal">
+
+                <div class="project-meta">
+                    <span>03</span>
+                    <span>TELEGRAM BOT</span>
+                    <span>2026</span>
+                </div>
+
+                <div class="project-image">
+
+                    <div class="project-placeholder smartsave-placeholder">
+                        <span>SMART</span>
+                        <span>SAVE</span>
+                    </div>
+
+                    <img
+                        loading="lazy" decoding="async" src="images/smartsave.webp" width="1774" height="887"
+                        alt="SmartSave — Personal Finance Telegram Assistant" data-i18n-alt="alt.smartsave"
+                    >
+
+                    <div class="project-image-overlay">
+                        <span data-i18n="projects.smartsave.overlay">Telegram Assistant</span>
+                    </div>
+
+                </div>
+
+                <div class="project-content">
+
+                    <div>
+                        <p class="project-type">
+                            TELEGRAM AUTOMATION
+                        </p>
+
+                        <h3>SMARTSAVE</h3>
+                    </div>
+
+                    <div class="project-info">
+
+                        <p data-i18n="projects.smartsave.description">
+                            Telegram-асистент для обліку особистих фінансів:
+                            доходи й витрати, імпорт банківських CSV-виписок,
+                            автоматична категоризація, фінансові цілі
+                            та аналітика.
+                        </p>
+
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>Aiogram</span>
+                            <span>SQLite</span>
+                            <span>Telegram Bot API</span>
+                            <span>CSV</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+        <section class="about section" id="about">
+
+            <div class="section-heading reveal">
+                <p class="eyebrow">ABOUT / APPROACH</p>
+
+                <div class="section-heading-row">
+                    <h2 data-i18n="about.title">Про мене</h2>
+                    <span>01</span>
+                </div>
+            </div>
+
+            <div class="about-grid reveal">
+                <div class="about-statement">
+                    <span data-i18n="about.statement1">НЕ ПРОСТО</span>
+                    <span class="outline-text" data-i18n="about.statement2">ІНТЕРФЕЙС.</span>
+                </div>
+
+                <div class="about-copy">
+                    <p data-i18n="about.copy1">
+                        Я full-stack розробник, працюю з Python, Flask і JavaScript.
+                        Створюю вебзастосунки від користувацького інтерфейсу
+                        до серверної логіки, бази даних і deployment.
+                    </p>
+
+                    <p data-i18n="about.copy2">
+                        Мені цікаві проєкти, які розв’язують конкретні задачі:
+                        отримання заявок, онлайн-запис, автоматизація, робота
+                        з клієнтами та інтеграції із зовнішніми сервісами.
+                    </p>
+
+                    <div class="about-pipeline" aria-label="Процес розробки" data-i18n-aria="aria.pipeline">
+                        <span>FRONTEND</span>
+                        <i>→</i>
+                        <span>BACKEND</span>
+                        <i>→</i>
+                        <span>DATABASE</span>
+                        <i>→</i>
+                        <span>DEPLOY</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TOOLKIT
+        ========================== -->
+        <section class="toolkit section">
+
+            <div class="section-heading reveal">
+                <p class="eyebrow">TECH STACK</p>
+
+                <div class="section-heading-row">
+                    <h2 data-i18n="toolkit.title">Інструменти</h2>
+                    <span>04</span>
+                </div>
+            </div>
+
+            <div class="toolkit-grid">
+                <article class="toolkit-card reveal">
+                    <span class="toolkit-number">01</span>
+                    <h3>Frontend</h3>
+                    <p>HTML5 / CSS3 / JavaScript / Responsive Design</p>
+                </article>
+
+                <article class="toolkit-card reveal">
+                    <span class="toolkit-number">02</span>
+                    <h3>Backend</h3>
+                    <p>Python / Flask / REST API / Authentication</p>
+                </article>
+
+                <article class="toolkit-card reveal">
+                    <span class="toolkit-number">03</span>
+                    <h3>Data & API</h3>
+                    <p>PostgreSQL / SQLite / Neon / Telegram Bot API / Aiogram</p>
+                </article>
+
+                <article class="toolkit-card reveal">
+                    <span class="toolkit-number">04</span>
+                    <h3>Deploy</h3>
+                    <p>Git / GitHub / Render / Gunicorn / VS Code</p>
+                </article>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SERVICES
+        ========================== -->
+        <section class="services section">
+
+            <div class="section-heading reveal">
+                <p class="eyebrow">WHAT I DO</p>
+
+                <div class="section-heading-row">
+                    <h2 data-i18n="services.title">Що я роблю</h2>
+                    <span>04</span>
+                </div>
+            </div>
+
+            <div class="services-list">
+                <article class="service-row reveal">
+                    <span>01</span>
+                    <h3>BUSINESS WEBSITES</h3>
+                    <p data-i18n="services.websites">Адаптивні сайти для послуг і малого бізнесу.</p>
+                </article>
+
+                <article class="service-row reveal">
+                    <span>02</span>
+                    <h3>BOOKING SYSTEMS</h3>
+                    <p data-i18n="services.booking">Онлайн-запис, розклад, клієнти та адміністративні панелі.</p>
+                </article>
+
+                <article class="service-row reveal">
+                    <span>03</span>
+                    <h3>TELEGRAM BOTS</h3>
+                    <p data-i18n="services.bots">Автоматизація, сповіщення, обробка даних і користувацькі сценарії.</p>
+                </article>
+
+                <article class="service-row reveal">
+                    <span>04</span>
+                    <h3>BACKEND & API</h3>
+                    <p data-i18n="services.backend">Серверна логіка, бази даних, API та інтеграції.</p>
+                </article>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+        <section class="contact" id="contact">
+            <div class="contact-inner reveal">
+                <p class="eyebrow">AVAILABLE FOR PROJECTS</p>
+
+                <h2>
+                    <span>LET'S BUILD</span>
+                    <span class="outline-text">SOMETHING.</span>
+                </h2>
+
+                <p class="contact-copy" data-i18n="contact.copy">
+                    Вебзастосунки, бізнес-системи та Telegram-автоматизація.
+                    Готовий обговорити задачу й підібрати практичне рішення.
+                </p>
+
+                <div class="contact-links">
+                    <a
+                        href="https://github.com/Romario15811"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                     data-i18n="contact.github">
+                        GITHUB PROFILE ↗
+                    </a>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <span>ROMAN / FULL-STACK DEVELOPER</span>
+                <span>2026</span>
+            </footer>
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
