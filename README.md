@@ -52,7 +52,7 @@ portfolio/
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/Romario15811/portfolio.git
+   git clone https://github.com/roman-webdev/portfolio.git
    cd portfolio
    ```
 
@@ -70,4 +70,4 @@ The workflow is: edit locally → commit changes → push to GitHub → Vercel d
 
 ## Author / Contact
 
-**Roman** — [GitHub profile](https://github.com/Romario15811)
+**Roman** — [GitHub profile](https://github.com/roman-webdev)
