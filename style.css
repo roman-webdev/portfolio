@@ -2621,3 +2621,17 @@ main {
     letter-spacing: inherit;
     margin-right: 0.08em;
 }
+
+/* Preserve the complete ShopFlow storefront at every breakpoint. */
+.project-shopflow {
+    --project-glow: 111, 165, 141;
+}
+.project-shopflow .project-image {
+    aspect-ratio: 1585 / 991;
+}
+.shopflow-placeholder {
+    background: #263d35;
+}
+.shopflow-placeholder span:last-child {
+    color: #b5d4c2;
+}

@@ -771,6 +771,11 @@ const translations = {
                     "Система онлайн-запису та керування барбершопом: публічний сайт, PostgreSQL, Telegram-сповіщення і захищена CRM для роботи з клієнтами, розкладом та аналітикою."
             },
 
+            shopflow: {
+                subtitle: "Full-Stack E-commerce Platform",
+                description: "Багатомовна e-commerce платформа з варіантами товарів, обраним, історією переглядів, порівнянням, постійним кошиком, checkout, адмін-панеллю, керуванням замовленнями та PostgreSQL."
+            },
+
             drivefix: {
                 description:
                     "Сайт автосервісу з адаптивним інтерфейсом, backend API, серверною валідацією заявок і надсиланням нових звернень власнику через Telegram."
@@ -816,6 +821,7 @@ const translations = {
         },
 
         alt: {
+            shopflow: "ShopFlow — багатомовна e-commerce платформа",
             manor:
                 "MANOR HOUSE — система онлайн-запису та CRM для барбершопу",
             drivefix:
@@ -859,6 +865,11 @@ const translations = {
             manor: {
                 description:
                     "Система онлайн-записи и управления барбершопом: публичный сайт, PostgreSQL, Telegram-уведомления и защищённая CRM для работы с клиентами, расписанием и аналитикой."
+            },
+
+            shopflow: {
+                subtitle: "Full-Stack E-commerce Platform",
+                description: "Многоязычная e-commerce платформа с вариантами товаров, избранным, историей просмотров, сравнением, постоянной корзиной, checkout, админ-панелью, управлением заказами и PostgreSQL."
             },
 
             drivefix: {
@@ -906,6 +917,7 @@ const translations = {
         },
 
         alt: {
+            shopflow: "ShopFlow — многоязычная e-commerce платформа",
             manor:
                 "MANOR HOUSE — система онлайн-записи и CRM для барбершопа",
             drivefix:
@@ -949,6 +961,11 @@ const translations = {
             manor: {
                 description:
                     "A barbershop booking and management system with a public website, PostgreSQL, Telegram notifications and a protected CRM for clients, scheduling and analytics."
+            },
+
+            shopflow: {
+                subtitle: "Full-Stack E-commerce Platform",
+                description: "Multilingual e-commerce platform with product variants, favorites, recently viewed products, comparison, persistent cart, checkout, admin dashboard, order management and PostgreSQL."
             },
 
             drivefix: {
@@ -996,6 +1013,7 @@ const translations = {
         },
 
         alt: {
+            shopflow: "ShopFlow — multilingual e-commerce platform",
             manor:
                 "MANOR HOUSE — barbershop booking and CRM system",
             drivefix:
