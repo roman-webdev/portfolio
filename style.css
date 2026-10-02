@@ -2628,11 +2628,9 @@ main {
     color: #b5d4c2;
 }
 
-/* Give every project the same artwork frame without distorting images. */
-.project .project-image {
-    aspect-ratio: 4 / 3;
-}
-.project .project-image img {
-    object-fit: cover;
+/* Fit the new artwork inside the established responsive project frames. */
+.project-shopflow .project-image img,
+.project-smartsave .project-image img {
+    object-fit: contain;
     object-position: center;
 }
