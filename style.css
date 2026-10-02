@@ -2628,9 +2628,21 @@ main {
     color: #b5d4c2;
 }
 
-/* Fit the new artwork inside the established responsive project frames. */
+/* Use the same full-width presentation as MANOR HOUSE. */
+.project-drivefix .project-image,
+.project-smartsave .project-image {
+    width: 100%;
+}
+
+/* Preserve the 4:3 artwork composition while filling the entire frame,
+   including tablet/mobile where the generic frame becomes taller. */
+.project-shopflow .project-image,
+.project-smartsave .project-image {
+    aspect-ratio: 4 / 3;
+}
+
 .project-shopflow .project-image img,
 .project-smartsave .project-image img {
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
