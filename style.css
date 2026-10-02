@@ -2485,11 +2485,6 @@ main {
 
 /* Tablet layout/navigation; the confirmed mobile layout stays at <=640px. */
 @media (min-width: 641px) and (max-width: 900px) {
-    /* Keep the SmartSave logo inside the tablet crop. */
-    .project-smartsave .project-image img {
-        object-position: left center;
-    }
-
     /* Keep the animated hero glow from widening the tablet viewport.
        Projects already fills the section; no card-width override is needed. */
     html, body {
@@ -2622,16 +2617,22 @@ main {
     margin-right: 0.08em;
 }
 
-/* Preserve the complete ShopFlow storefront at every breakpoint. */
+/* ShopFlow artwork palette. */
 .project-shopflow {
     --project-glow: 111, 165, 141;
-}
-.project-shopflow .project-image {
-    aspect-ratio: 1585 / 991;
 }
 .shopflow-placeholder {
     background: #263d35;
 }
 .shopflow-placeholder span:last-child {
     color: #b5d4c2;
+}
+
+/* Give every project the same artwork frame without distorting images. */
+.project .project-image {
+    aspect-ratio: 4 / 3;
+}
+.project .project-image img {
+    object-fit: cover;
+    object-position: center;
 }
