@@ -14,7 +14,7 @@ This static website introduces Roman and presents selected work in web developme
 
 - **MANOR (MANOR HOUSE)** — A barbershop booking and management system.
 - **DriveFix** — An auto service website for presenting services and handling customer inquiries.
-- **SmartSave** — A Telegram assistant for tracking personal finances.
+- **SmartSave Beta 1.3.14** — Release Candidate / Beta Deployment: a UA / EN / RU Telegram finance assistant with income/expense tracking, budgets, goals, CSV imports, insights and recovery. 454 automated tests passed, 0 skipped. Linux / Oracle Linux beta deployment; native Oracle Linux regression, Telegram live acceptance and journal/service verification remain pending before production readiness. Its public repository is documentation/showcase-only.
 
 These are projects showcased by the portfolio; the portfolio itself is a static website.
 

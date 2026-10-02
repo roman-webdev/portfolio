@@ -783,7 +783,7 @@ const translations = {
 
             smartsave: {
                 description:
-                    "Telegram-асистент для обліку особистих фінансів: доходи й витрати, імпорт банківських CSV-виписок, автоматична категоризація, фінансові цілі та аналітика.",
+                    "Telegram-асистент для особистих фінансів: доходи й витрати, бюджети, цілі, CSV-імпорт, аналітика та відновлення даних. UA / EN / RU. Beta 1.3.14 — Release Candidate / Beta Deployment на Linux / Oracle Linux. 454 автоматизовані тести пройдено, 0 пропущено.",
                 overlay: "Telegram Assistant"
             }
         },
@@ -879,7 +879,7 @@ const translations = {
 
             smartsave: {
                 description:
-                    "Telegram-ассистент для учёта личных финансов: доходы и расходы, импорт банковских CSV-выписок, автоматическая категоризация, финансовые цели и аналитика.",
+                    "Telegram-ассистент для личных финансов: доходы и расходы, бюджеты, цели, CSV-импорт, аналитика и восстановление данных. UA / EN / RU. Beta 1.3.14 — Release Candidate / Beta Deployment на Linux / Oracle Linux. 454 автоматизированных теста пройдено, 0 пропущено.",
                 overlay: "Telegram Assistant"
             }
         },
@@ -975,7 +975,7 @@ const translations = {
 
             smartsave: {
                 description:
-                    "A Telegram assistant for personal finance tracking: income and expenses, bank CSV imports, automatic categorization, financial goals and analytics.",
+                    "A personal finance Telegram assistant: income and expenses, budgets, goals, CSV imports, insights and data recovery. UA / EN / RU. Beta 1.3.14 — Release Candidate / Beta Deployment on Linux / Oracle Linux. 454 automated tests passed, 0 skipped.",
                 overlay: "Telegram Assistant"
             }
         },
