@@ -776,6 +776,11 @@ const translations = {
                 description: "Багатомовна e-commerce платформа з варіантами товарів, обраним, історією переглядів, порівнянням, постійним кошиком, checkout, адмін-панеллю, керуванням замовленнями та PostgreSQL."
             },
 
+            astrasynq: {
+                description: "Автоматизація даних та інтеграцій: валідація й дедуплікація CSV, автентифікація та рольовий доступ (RBAC), надійна доставка через webhook і Telegram із transactional outbox та повторними спробами. FastAPI backend, React / TypeScript frontend і PostgreSQL. EN / UA / RU та immersive WebGL landing.",
+                status: "Release Candidate · Синтетичне демо · Не готовий до production. Hosted CI; live demo на Render Free + Neon Free."
+            },
+
             drivefix: {
                 description:
                     "Сайт автосервісу з адаптивним інтерфейсом, backend API, серверною валідацією заявок і надсиланням нових звернень власнику через Telegram."
@@ -872,6 +877,11 @@ const translations = {
                 description: "Многоязычная e-commerce платформа с вариантами товаров, избранным, историей просмотров, сравнением, постоянной корзиной, checkout, админ-панелью, управлением заказами и PostgreSQL."
             },
 
+            astrasynq: {
+                description: "Автоматизация данных и интеграций: валидация и дедупликация CSV, аутентификация и ролевой доступ (RBAC), надёжная доставка через webhook и Telegram с transactional outbox и повторными попытками. FastAPI backend, React / TypeScript frontend и PostgreSQL. EN / UA / RU и immersive WebGL landing.",
+                status: "Release Candidate · Синтетическое демо · Не готов к production. Hosted CI; live demo на Render Free + Neon Free."
+            },
+
             drivefix: {
                 description:
                     "Сайт автосервиса с адаптивным интерфейсом, backend API, серверной валидацией заявок и отправкой новых обращений владельцу через Telegram."
@@ -966,6 +976,11 @@ const translations = {
             shopflow: {
                 subtitle: "Full-Stack E-commerce Platform",
                 description: "Multilingual e-commerce platform with product variants, favorites, recently viewed products, comparison, persistent cart, checkout, admin dashboard, order management and PostgreSQL."
+            },
+
+            astrasynq: {
+                description: "Data automation and integrations with CSV validation and deduplication, authentication and role-based access (RBAC), and reliable webhook / Telegram delivery using a transactional outbox with retries. FastAPI backend, React / TypeScript frontend and PostgreSQL. EN / UA / RU and an immersive WebGL landing.",
+                status: "Release Candidate · Synthetic demo · Not production-ready. Hosted CI; live demo on Render Free + Neon Free."
             },
 
             drivefix: {

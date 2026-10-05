@@ -2646,3 +2646,9 @@ main {
     object-fit: cover;
     object-position: center;
 }
+
+/* AstraSynq uses the existing project typography and responsive frame. */
+.project-astrasynq { --project-glow: 96, 195, 181; }
+.astrasynq-placeholder { background: radial-gradient(ellipse at 70% 25%, #214e4a, #0b161e 70%); }
+.astrasynq-placeholder span:last-child { color: #83d9cc; }
+.project-astrasynq .project-status { font-size: 0.875rem; line-height: 1.6; }
