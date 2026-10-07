@@ -766,7 +766,7 @@ const translations = {
             title: "Проєкти",
             open: "Відкрити проєкт ↗",
 
-            helixprimus: { description: "Від звернення до перевіреної відповіді: аналіз, політики, погодження оператором, SLA, аналітика й аудит в одному робочому просторі. Portfolio Release Candidate / demo-grade: синтетичні дані, deterministic mock AI та mock delivery." },
+            helixprimus: { description: "Demo-grade AI-простір для роботи з клієнтами: Inbox, AI Analysis, Knowledge Base, SLA, Audit/Timeline та аналітика — від звернення до відповіді, погодженої оператором. Синтетичні дані, mock AI та mock delivery." },
 
             manor: {
                 description:
@@ -870,7 +870,7 @@ const translations = {
             title: "Проекты",
             open: "Открыть проект ↗",
 
-            helixprimus: { description: "От обращения до проверенного ответа: анализ, политики, одобрение оператором, SLA, аналитика и аудит в одном рабочем пространстве. Portfolio Release Candidate / demo-grade: synthetic data, deterministic mock AI и mock delivery." },
+            helixprimus: { description: "Demo-grade AI-пространство для работы с клиентами: Inbox, AI Analysis, Knowledge Base, SLA, Audit/Timeline и аналитика — от обращения до ответа, одобренного оператором. Синтетические данные, mock AI и mock delivery." },
 
             manor: {
                 description:
@@ -974,7 +974,7 @@ const translations = {
             title: "Projects",
             open: "Open project ↗",
 
-            helixprimus: { description: "From customer issue to a reviewed response: analysis, policy matching, human approval, SLA, analytics and an audit trail in one workspace. Portfolio Release Candidate / demo-grade with synthetic data, deterministic mock AI and mock delivery." },
+            helixprimus: { description: "A demo-grade AI customer operations workspace: Inbox, AI Analysis, Knowledge Base, SLA, Audit/Timeline and analytics — from customer issue to a human-approved response. Synthetic data, mock AI and mock delivery." },
 
             manor: {
                 description:
