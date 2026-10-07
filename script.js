@@ -766,6 +766,8 @@ const translations = {
             title: "Проєкти",
             open: "Відкрити проєкт ↗",
 
+            helixprimus: { description: "Від звернення до перевіреної відповіді: аналіз, політики, погодження оператором, SLA, аналітика й аудит в одному робочому просторі. Portfolio Release Candidate / demo-grade: синтетичні дані, deterministic mock AI та mock delivery." },
+
             manor: {
                 description:
                     "Система онлайн-запису та керування барбершопом: публічний сайт, PostgreSQL, Telegram-сповіщення і захищена CRM для роботи з клієнтами, розкладом та аналітикою."
@@ -821,6 +823,7 @@ const translations = {
         },
 
         alt: {
+            helixprimus: "HELIXPRIMUS — AI Customer Operations Platform",
             shopflow: "ShopFlow — багатомовна e-commerce платформа",
             manor:
                 "MANOR HOUSE — система онлайн-запису та CRM для барбершопу",
@@ -861,6 +864,8 @@ const translations = {
         projects: {
             title: "Проекты",
             open: "Открыть проект ↗",
+
+            helixprimus: { description: "От обращения до проверенного ответа: анализ, политики, одобрение оператором, SLA, аналитика и аудит в одном рабочем пространстве. Portfolio Release Candidate / demo-grade: synthetic data, deterministic mock AI и mock delivery." },
 
             manor: {
                 description:
@@ -917,6 +922,7 @@ const translations = {
         },
 
         alt: {
+            helixprimus: "HELIXPRIMUS — AI Customer Operations Platform",
             shopflow: "ShopFlow — многоязычная e-commerce платформа",
             manor:
                 "MANOR HOUSE — система онлайн-записи и CRM для барбершопа",
@@ -957,6 +963,8 @@ const translations = {
         projects: {
             title: "Projects",
             open: "Open project ↗",
+
+            helixprimus: { description: "From customer issue to a reviewed response: analysis, policy matching, human approval, SLA, analytics and an audit trail in one workspace. Portfolio Release Candidate / demo-grade with synthetic data, deterministic mock AI and mock delivery." },
 
             manor: {
                 description:
@@ -1013,6 +1021,7 @@ const translations = {
         },
 
         alt: {
+            helixprimus: "HELIXPRIMUS — AI Customer Operations Platform",
             shopflow: "ShopFlow — multilingual e-commerce platform",
             manor:
                 "MANOR HOUSE — barbershop booking and CRM system",
