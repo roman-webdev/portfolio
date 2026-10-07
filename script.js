@@ -739,7 +739,7 @@ const translations = {
         meta: {
             title: "Roman — Full-Stack Developer",
             description:
-                "Full-stack розробник. Вебзастосунки, booking-системи, backend і Telegram-боти."
+                "Full-stack / backend розробник: Python, FastAPI/Flask, API-інтеграції, автоматизація, React/TypeScript та PostgreSQL."
         },
 
         aria: {
@@ -759,7 +759,7 @@ const translations = {
 
         hero: {
             description:
-                "Створюю вебсайти, системи онлайн-запису та Telegram-ботів — від інтерфейсу й backend-логіки до бази даних і production deployment."
+                "Створюю backend-системи на Python із FastAPI/Flask та PostgreSQL, API-інтеграції й автоматизацію, з інтерфейсами на React/TypeScript."
         },
 
         projects: {
@@ -823,7 +823,7 @@ const translations = {
 
         contact: {
             copy:
-                "Вебзастосунки, бізнес-системи та Telegram-автоматизація. Готовий обговорити задачу й підібрати практичне рішення.",
+                "Вебзастосунки, API-інтеграції та автоматизація. Готовий обговорити задачу й підібрати практичне рішення.",
             github: "GITHUB PROFILE ↗"
         },
 
@@ -843,7 +843,7 @@ const translations = {
         meta: {
             title: "Roman — Full-Stack Developer",
             description:
-                "Full-stack разработчик. Веб-приложения, booking-системы, backend и Telegram-боты."
+                "Full-stack / backend разработчик: Python, FastAPI/Flask, API-интеграции, автоматизация, React/TypeScript и PostgreSQL."
         },
 
         aria: {
@@ -863,7 +863,7 @@ const translations = {
 
         hero: {
             description:
-                "Создаю веб-сайты, системы онлайн-записи и Telegram-ботов — от интерфейса и backend-логики до базы данных и production deployment."
+                "Создаю backend-системы на Python с FastAPI/Flask и PostgreSQL, API-интеграции и автоматизацию, с интерфейсами на React/TypeScript."
         },
 
         projects: {
@@ -927,7 +927,7 @@ const translations = {
 
         contact: {
             copy:
-                "Веб-приложения, бизнес-системы и Telegram-автоматизация. Готов обсудить задачу и подобрать практичное решение.",
+                "Веб-приложения, API-интеграции и автоматизация. Готов обсудить задачу и подобрать практичное решение.",
             github: "GITHUB PROFILE ↗"
         },
 
@@ -947,7 +947,7 @@ const translations = {
         meta: {
             title: "Roman — Full-Stack Developer",
             description:
-                "Full-stack developer building web applications, booking systems, backend services and Telegram bots."
+                "Full-stack / backend developer: Python, FastAPI/Flask, API integrations, automation, React/TypeScript and PostgreSQL."
         },
 
         aria: {
@@ -967,7 +967,7 @@ const translations = {
 
         hero: {
             description:
-                "I build websites, online booking systems and Telegram bots — from interface and backend logic to databases and production deployment."
+                "I build Python backend systems with FastAPI/Flask and PostgreSQL, API integrations and automation, with React/TypeScript interfaces."
         },
 
         projects: {
@@ -1031,7 +1031,7 @@ const translations = {
 
         contact: {
             copy:
-                "Web applications, business systems and Telegram automation. Ready to discuss your task and find a practical solution.",
+                "Web applications, API integrations and automation. Ready to discuss your task and find a practical solution.",
             github: "GITHUB PROFILE ↗"
         },
 
