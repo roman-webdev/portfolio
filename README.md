@@ -15,6 +15,8 @@ This static website introduces Roman and presents selected work in web developme
 - **HELIXPRIMUS** — AI Customer Operations Platform: triage, policy matching, human-approved replies, analytics, SLA and audit. FastAPI, React, TypeScript, SQLAlchemy/Alembic, PostgreSQL-ready and deterministic AI provider abstraction. EN / RU / UA. Portfolio Release Candidate / demo-grade; synthetic data, mock AI and mock delivery. [Source](https://github.com/roman-webdev/HELIXPRIMUS).
 
 - **MANOR (MANOR HOUSE)** — A barbershop booking and management system.
+- **ShopFlow** — A multilingual full-stack e-commerce platform.
+- **[AstraSynq](https://github.com/roman-webdev/AstraSynq)** — Data Automation & Integration Platform: FastAPI, React / TypeScript, PostgreSQL, auth / RBAC and reliable outbox delivery. Hosted CI and a [live synthetic demo](https://astrasynq-synthetic-demo.onrender.com/) on Render Free + Neon Free. Release Candidate; not production-ready.
 - **DriveFix** — An auto service website for presenting services and handling customer inquiries.
 - **SmartSave Beta 1.3.14** — Release Candidate / Beta Deployment: a UA / EN / RU Telegram finance assistant with income/expense tracking, budgets, goals, CSV imports, insights and recovery. 454 automated tests passed, 0 skipped. Linux / Oracle Linux beta deployment; native Oracle Linux regression, Telegram live acceptance and journal/service verification remain pending before production readiness. Its public repository is documentation/showcase-only.
 
@@ -33,7 +35,7 @@ These are projects showcased by the portfolio; the portfolio itself is a static 
 - Responsive layout for desktop, tablet and mobile screens.
 - English, Russian and Ukrainian language switcher (EN / RU / UA).
 - Animations and interactive page elements.
-- Project previews for MANOR, DriveFix and SmartSave.
+- Project showcases for MANOR, ShopFlow, AstraSynq, DriveFix and SmartSave.
 - Section navigation and mobile menu.
 - SEO metadata, Open Graph tags and a favicon.
 
