@@ -800,7 +800,7 @@ const translations = {
             statement1: "НЕ ПРОСТО",
             statement2: "ІНТЕРФЕЙС.",
             copy1:
-                "Я full-stack розробник, працюю з Python, Flask і JavaScript. Створюю вебзастосунки від користувацького інтерфейсу до серверної логіки, бази даних і deployment.",
+                "Я full-stack розробник із фокусом на Python backend, FastAPI/Flask і PostgreSQL. Створюю інтерфейси на React/TypeScript, API-інтеграції та автоматизацію — від користувацького інтерфейсу до серверної логіки, бази даних і deployment.",
             copy2:
                 "Мені цікаві проєкти, які розв’язують конкретні задачі: отримання заявок, онлайн-запис, автоматизація, робота з клієнтами та інтеграції із зовнішніми сервісами."
         },
@@ -904,7 +904,7 @@ const translations = {
             statement1: "НЕ ПРОСТО",
             statement2: "ИНТЕРФЕЙС.",
             copy1:
-                "Я full-stack разработчик, работающий с Python, Flask и JavaScript. Создаю веб-приложения от пользовательского интерфейса до серверной логики, базы данных и deployment.",
+                "Я full-stack разработчик с фокусом на Python backend, FastAPI/Flask и PostgreSQL. Создаю интерфейсы на React/TypeScript, API-интеграции и автоматизацию — от пользовательского интерфейса до серверной логики, базы данных и deployment.",
             copy2:
                 "Мне интересны проекты, которые решают конкретные задачи: получение заявок, онлайн-запись, автоматизация, работа с клиентами и интеграции с внешними сервисами."
         },
@@ -1008,7 +1008,7 @@ const translations = {
             statement1: "MORE THAN",
             statement2: "INTERFACE.",
             copy1:
-                "I am a full-stack developer working with Python, Flask and JavaScript. I build web applications from the user interface to server-side logic, databases and deployment.",
+                "I am a full-stack developer focused on Python backends, FastAPI/Flask and PostgreSQL. I build React/TypeScript interfaces, API integrations and automation — from the user interface to server-side logic, databases and deployment.",
             copy2:
                 "I focus on projects that solve practical problems: lead capture, online booking, automation, customer workflows and integrations with external services."
         },
