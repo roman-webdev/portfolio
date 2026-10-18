@@ -784,8 +784,10 @@ const translations = {
             },
 
             drivefix: {
+                subtitle: "РЕДИЗАЙН / ДЕМО У БРАУЗЕРІ",
+                demoTag: "Синтетичне демо",
                 description:
-                    "Сайт автосервісу з адаптивним інтерфейсом, backend API, серверною валідацією заявок і надсиланням нових звернень власнику через Telegram."
+                    "Редизайн сайту автосервісу на Cloudflare Pages: адаптивний інтерфейс і синтетичний демо-запис лише у браузері, без надсилання заявки чи Telegram-сповіщень. Оригінальний Flask/Render-проєкт збережено окремо; експериментальний Cloudflare backend не підключено до демо."
             },
 
             smartsave: {
@@ -833,7 +835,7 @@ const translations = {
             manor:
                 "MANOR HOUSE — система онлайн-запису та CRM для барбершопу",
             drivefix:
-                "DRIVEFIX — сайт автосервісу",
+                "DRIVEFIX — редизайн і демо-запис у браузері",
             smartsave:
                 "SmartSave — Telegram-асистент для особистих фінансів"
         }
@@ -888,8 +890,10 @@ const translations = {
             },
 
             drivefix: {
+                subtitle: "РЕДИЗАЙН / ДЕМО В БРАУЗЕРЕ",
+                demoTag: "Синтетическое демо",
                 description:
-                    "Сайт автосервиса с адаптивным интерфейсом, backend API, серверной валидацией заявок и отправкой новых обращений владельцу через Telegram."
+                    "Редизайн сайта автосервиса на Cloudflare Pages: адаптивный интерфейс и синтетическая демо-запись только в браузере, без отправки заявки или Telegram-уведомлений. Оригинальный Flask/Render-проект сохранён отдельно; экспериментальный Cloudflare backend не подключён к демо."
             },
 
             smartsave: {
@@ -937,7 +941,7 @@ const translations = {
             manor:
                 "MANOR HOUSE — система онлайн-записи и CRM для барбершопа",
             drivefix:
-                "DRIVEFIX — сайт автосервиса",
+                "DRIVEFIX — редизайн и демо-запись в браузере",
             smartsave:
                 "SmartSave — Telegram-ассистент для личных финансов"
         }
@@ -992,8 +996,10 @@ const translations = {
             },
 
             drivefix: {
+                subtitle: "REDESIGN / BROWSER DEMO",
+                demoTag: "Synthetic demo",
                 description:
-                    "An auto service website with a responsive interface, backend API, server-side request validation and Telegram notifications for new customer inquiries."
+                    "Auto service website redesign on Cloudflare Pages with a responsive interface and browser-only synthetic booking demo. No booking request or Telegram notification is sent. The original Flask/Render project is preserved separately; the experimental Cloudflare backend is not connected to this demo."
             },
 
             smartsave: {
@@ -1041,7 +1047,7 @@ const translations = {
             manor:
                 "MANOR HOUSE — barbershop booking and CRM system",
             drivefix:
-                "DRIVEFIX — auto service website",
+                "DRIVEFIX — redesign and browser-only booking demo",
             smartsave:
                 "SmartSave — personal finance Telegram assistant"
         }
