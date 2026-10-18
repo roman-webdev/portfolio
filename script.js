@@ -196,6 +196,7 @@ if (!reducedMotion.matches) {
 
 
     const paintPointer = () => {
+        if (reducedMotion.matches) { pointerFrame = null; return; }
 
         document.documentElement.style.setProperty(
             "--mouse-x",
@@ -217,6 +218,7 @@ if (!reducedMotion.matches) {
             "pointermove",
             (event) => {
 
+                if (reducedMotion.matches) return;
                 pointerX =
                     event.clientX;
 
@@ -273,6 +275,7 @@ if (!reducedMotion.matches) {
                 card.addEventListener(
                     "pointermove",
                     (event) => {
+                        if (reducedMotion.matches) return;
 
                         const rect =
                             card.getBoundingClientRect();
@@ -629,6 +632,7 @@ if (
         let cardY = 0;
 
         const paintCardGlow = () => {
+            if (reducedMotion.matches) { cardFrame = null; return; }
 
             card.style.setProperty(
                 "--card-x",
@@ -647,6 +651,7 @@ if (
         card.addEventListener(
             "pointermove",
             (event) => {
+                if (reducedMotion.matches) return;
 
                 const rect =
                     card.getBoundingClientRect();
@@ -684,6 +689,7 @@ if (
         let contactY = 0;
 
         const paintContactGlow = () => {
+            if (reducedMotion.matches) { contactFrame = null; return; }
 
             contactSection.style.setProperty(
                 "--contact-x",
@@ -702,6 +708,7 @@ if (
         contactSection.addEventListener(
             "pointermove",
             (event) => {
+                if (reducedMotion.matches) return;
 
                 const rect =
                     contactSection
@@ -1135,6 +1142,16 @@ function applyLanguage(language) {
     document.documentElement.lang =
         htmlLanguage;
 
+    for (const selector of ['meta[property="og:title"]', 'meta[name="twitter:title"]']) {
+        document.querySelector(selector)?.setAttribute("content", translations[selectedLanguage].meta.title);
+    }
+    for (const selector of ['meta[property="og:description"]', 'meta[name="twitter:description"]']) {
+        document.querySelector(selector)?.setAttribute("content", translations[selectedLanguage].meta.description);
+    }
+    document.querySelector('meta[property="og:locale"]')?.setAttribute("content", {ua: "uk_UA", ru: "ru_RU", en: "en_US"}[selectedLanguage]);
+    const otherLocales = ["uk_UA", "ru_RU", "en_US"].filter(locale => locale !== {ua: "uk_UA", ru: "ru_RU", en: "en_US"}[selectedLanguage]);
+    document.querySelectorAll('meta[property="og:locale:alternate"]').forEach((meta, index) => meta.setAttribute("content", otherLocales[index]));
+
     document.title =
         translations[selectedLanguage]
             .meta.title;
@@ -1294,6 +1311,13 @@ languageButtons.forEach((button) => {
 });
 
 
+const demoStartNotes = {
+    ua: "Перший запуск демо на Render може тривати десятки секунд. Зачекайте на завантаження; прев’ю вище доступне без запуску демо.",
+    ru: "Первый запуск демо на Render может занимать десятки секунд. Дождитесь загрузки; превью выше доступно без запуска демо.",
+    en: "The first Render demo load may take tens of seconds. Allow it to finish; the preview above is available without starting the demo."
+};
+for (const language of ["ua", "ru", "en"]) translations[language].stage2 = { demoStart: demoStartNotes[language] };
+
 let savedLanguage = null;
 
 try {
@@ -1366,6 +1390,7 @@ function createFireflyField() {
     let animationFrame = 0;
     let lastTime =
         performance.now();
+    let lastDrawTime = 0;
 
 
     const pointer = {
@@ -1969,11 +1994,16 @@ function createFireflyField() {
 
 
     function animate(time) {
-        if (reducedMotion.matches) { animationFrame = 0; return; }
+        if (document.hidden || reducedMotion.matches) { animationFrame = 0; return; }
+        if (time - lastDrawTime < 1000 / 30) {
+            animationFrame = requestAnimationFrame(animate);
+            return;
+        }
+        lastDrawTime = time;
 
         const delta =
             Math.min(
-                32,
+                64,
                 Math.max(
                     8,
                     time - lastTime
