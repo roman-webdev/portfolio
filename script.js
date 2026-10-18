@@ -2135,11 +2135,11 @@ function renderPublicContacts(language) {
     const links = [];
     const telegram = profile.telegram || {};
     if (telegram.approvedForPublication === true && /^[A-Za-z][A-Za-z0-9_]{4,31}$/.test(telegram.username || "")) {
-        links.push(["telegram", "https://t.me/" + telegram.username, "@" + telegram.username]);
+        links.push(["telegram", "https://t.me/" + telegram.username]);
     }
     const email = profile.email || {};
     if (email.approvedForPublication === true && /^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+$/.test(email.address || "")) {
-        links.push(["email", "mailto:" + encodeURIComponent(email.address), email.address]);
+        links.push(["email", "mailto:" + encodeURIComponent(email.address)]);
     }
     const resume = profile.resume || {};
     if (resume.approvedForPublication === true && resume.url) {
@@ -2150,11 +2150,23 @@ function renderPublicContacts(language) {
     }
     document.querySelectorAll("[data-public-contact]").forEach(container => {
         container.replaceChildren();
-        links.forEach(([key, href, detail]) => {
+        links.forEach(([key, href]) => {
             const link = document.createElement("a");
             link.className = "contact-cta";
             link.href = href;
-            link.textContent = getTranslation(language, "stage1." + key) + (detail ? " · " + detail : " ↗");
+            link.setAttribute("aria-label", getTranslation(language, "stage1." + key));
+            if (key === "telegram" || key === "email") {
+                const icons = {
+                    telegram: "<svg class=\"contact-cta-icon\" xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"m22 2-7 20-4-9-9-4Z\"/><path d=\"M22 2 11 13\"/></svg>",
+                    email: "<svg class=\"contact-cta-icon\" xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"m3 7 9 6 9-6\"/></svg>"
+                };
+                link.innerHTML = icons[key];
+                const label = document.createElement("span");
+                label.textContent = key === "telegram" ? "Telegram" : "Email";
+                link.append(label);
+            } else {
+                link.textContent = getTranslation(language, "stage1." + key) + " ↗";
+            }
             if (href.startsWith("https:")) { link.target = "_blank"; link.rel = "noopener noreferrer"; }
             container.append(link);
         });

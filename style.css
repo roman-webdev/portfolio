@@ -2671,13 +2671,15 @@ main {
 .language-switcher button:hover { color: #fff; background: #353535; }
 .language-switcher button.is-active::after { bottom: 3px; }
 .public-contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; position: relative; z-index: 2; }
-.contact-cta { display: inline-flex; align-items: center; min-height: 48px; max-width: 100%; padding: 12px 20px; border: 1px solid #d8ff3e; border-radius: 999px; background: #d8ff3e; color: #101010; font-weight: 700; overflow-wrap: anywhere; }
+.contact-cta { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; max-width: 100%; padding: 12px 18px; border: 1px solid #d8ff3e; border-radius: 999px; background: #d8ff3e; color: #101010; font-size: 14px; line-height: 22px; font-weight: 700; white-space: nowrap; }
+.contact-cta-icon { flex: 0 0 18px; }
+.contact-cta:focus-visible { outline: 3px solid #f1eee8; outline-offset: 5px; }
 .contact-cta:hover { background: #f1eee8; border-color: #f1eee8; color: #101010; }
 .project-info .project-evidence { color: #c6c3bc; font-size: 14px; line-height: 1.65; margin: 18px 0; }
 .skip-link { position: fixed; top: 12px; left: 12px; z-index: 1000; transform: translateY(-200%); padding: 12px; background: #d8ff3e; color: #101010; }
 .skip-link:focus { transform: none; }
 section[id], main[id] { scroll-margin-top: 110px; }
-@media (max-width: 640px) { .public-contact-actions { flex-direction: column; align-items: flex-start; } .contact-cta { font-size: 14px; } }
+@media (max-width: 640px) { .public-contact-actions { gap: 10px; } .contact-cta { font-size: 14px; } }
 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
