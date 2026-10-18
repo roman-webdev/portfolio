@@ -28,6 +28,7 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#top" data-i18n="stage1.skip">До вмісту</a>
 
     <!-- =========================
          HEADER
@@ -37,18 +38,18 @@
             R<span>.</span>
         </a>
 
-        <nav class="nav" id="nav">
+        <nav class="nav" id="nav" aria-label="Основна навігація" data-i18n-aria="stage1.navigation">
             <a href="#projects" data-i18n="nav.projects">Проєкти</a>
             <a href="#about" data-i18n="nav.about">Про мене</a>
             <a href="#contact" data-i18n="nav.contact">Контакти</a>
         </nav>
 
         <div class="language-switcher" role="group" aria-label="Мова сайту" data-i18n-aria="aria.language">
-            <button type="button" data-lang="ua" aria-pressed="true">UA</button>
+            <button type="button" data-lang="ua" aria-label="Українська" lang="uk" aria-pressed="true">UA</button>
             <span aria-hidden="true">·</span>
-            <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+            <button type="button" data-lang="ru" aria-label="Русский" lang="ru" aria-pressed="false">RU</button>
             <span aria-hidden="true">·</span>
-            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+            <button type="button" data-lang="en" aria-label="English" lang="en" aria-pressed="false">EN</button>
         </div>
 
         <button
@@ -65,7 +66,7 @@
     </header>
 
 
-    <main id="top">
+    <main id="top" tabindex="-1">
 
         <!-- =========================
              HERO
@@ -102,6 +103,7 @@
 
             </div>
 
+            <div class="public-contact-actions hero-actions" data-public-contact hidden></div>
             <div class="hero-line"></div>
 
         </section>
@@ -170,6 +172,7 @@
                             і захищена CRM для роботи з клієнтами,
                             розкладом та аналітикою.
                         </p>
+                        <p class="project-evidence" data-i18n="stage1.manor">Публічний огляд: сайт запису. CRM потребує доступу; кейс і роль автора ще не опубліковані.</p>
 
                         <div class="tags">
                             <span>Python</span>
@@ -243,6 +246,7 @@
                         <p data-i18n="projects.shopflow.description">
                             Багатомовна e-commerce платформа з варіантами товарів, обраним, історією переглядів, порівнянням, постійним кошиком, checkout, адмін-панеллю, керуванням замовленнями та PostgreSQL.
                         </p>
+                        <p class="project-evidence" data-i18n="stage1.shopflow">Перегляньте демо та вихідний код нижче. Короткий опис особистого внеску ще не опублікований.</p>
 
                         <div class="tags">
                             <span>Python</span>
@@ -293,6 +297,7 @@
                     <div><p class="project-type">AI Customer Operations Platform</p><h3>HELIXPRIMUS</h3></div>
                     <div class="project-info">
                         <p data-i18n="projects.helixprimus.description">Demo-grade AI-простір для роботи з клієнтами: Inbox, AI Analysis, Knowledge Base, SLA, Audit/Timeline та аналітика — від звернення до відповіді, погодженої оператором. Синтетичні дані, mock AI та mock delivery.</p>
+                        <p class="project-evidence" data-i18n="stage1.helixprimus">Демо із синтетичними даними та mock AI/delivery. Вихідний код нижче; live demo може бути недоступним.</p>
                         <div class="tags"><span>FastAPI</span><span>React</span><span>TypeScript</span><span>SQLAlchemy / Alembic</span><span>PostgreSQL-ready</span><span>AI provider abstraction</span><span>Analytics / SLA / Audit</span><span>EN / RU / UA</span></div>
                         <div class="project-links"><a href="https://helixprimus.vercel.app/" target="_blank" rel="noopener noreferrer">LIVE DEMO ↗</a><a href="https://github.com/roman-webdev/HELIXPRIMUS" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></div>
                     </div>
@@ -312,6 +317,7 @@
                     <div><p class="project-type">Data Automation &amp; Integration Platform</p><h3>AstraSynq</h3></div>
                     <div class="project-info">
                         <p data-i18n="projects.astrasynq.description">Автоматизація даних та інтеграцій: валідація й дедуплікація CSV, автентифікація та рольовий доступ (RBAC), надійна доставка через webhook і Telegram із transactional outbox та повторними спробами. FastAPI backend, React / TypeScript frontend і PostgreSQL. EN / UA / RU та immersive WebGL landing.</p>
+                        <p class="project-evidence" data-i18n="stage1.astrasynq">Доступ до workspace може потребувати запрошення. Render demo може запускатися із затримкою; вихідний код нижче.</p>
                         <div class="tags"><span>FastAPI</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>SQLAlchemy / Alembic</span><span>WebGL</span></div>
                         <p class="project-status" data-i18n="projects.astrasynq.status">Release Candidate · Синтетичне демо · Не готовий до production. Hosted CI; live demo на Render Free + Neon Free.</p>
                         <div class="project-links">
@@ -367,6 +373,7 @@
                         <p data-i18n="projects.drivefix.description">
                             Редизайн сайту автосервісу на Cloudflare Pages: адаптивний інтерфейс і синтетичний демо-запис лише у браузері, без надсилання заявки чи Telegram-сповіщень. Оригінальний Flask/Render-проєкт збережено окремо; експериментальний Cloudflare backend не підключено до демо.
                         </p>
+                        <p class="project-evidence" data-i18n="stage1.drivefix">Доказ: демо редизайну на Pages. GitHub нижче містить також legacy; це не підтвердження роботи Cloudflare backend.</p>
 
                         <div class="tags">
                             <span>HTML</span>
@@ -445,6 +452,7 @@
                         <p data-i18n="projects.smartsave.description">
                             Telegram-асистент для особистих фінансів: доходи й витрати, бюджети, цілі, CSV-імпорт, аналітика та відновлення даних. UA / EN / RU. Beta 1.3.14 — Release Candidate / Beta Deployment на Linux / Oracle Linux. 454 автоматизовані тести пройдено, 0 пропущено.
                         </p>
+                        <p class="project-evidence" data-i18n="stage1.smartsave">Вітрина beta/RC. Публічний кейс, роль автора та звіт live-приймання ще не наведені; запуск бота не пропонується.</p>
 
                         <div class="tags">
                             <span>Python</span>
@@ -612,6 +620,7 @@
                     Готовий обговорити задачу й підібрати практичне рішення.
                 </p>
 
+                <div class="public-contact-actions" data-public-contact hidden></div>
                 <div class="contact-links">
                     <a
                         href="https://github.com/roman-webdev"
@@ -632,6 +641,7 @@
     </main>
 
 
+    <script src="public-profile.js"></script>
     <script src="script.js"></script>
 
 </body>
