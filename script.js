@@ -1055,6 +1055,50 @@ const translations = {
 };
 
 
+
+const stage1Translations = {
+    "ua": {
+        "skip": "До вмісту",
+        "navigation": "Основна навігація",
+        "telegram": "Написати в Telegram",
+        "email": "Написати на email",
+        "resume": "Резюме",
+        "manor": "Публічний огляд: сайт запису. CRM потребує доступу; кейс і роль автора ще не опубліковані.",
+        "shopflow": "Перегляньте демо та вихідний код нижче. Короткий опис особистого внеску ще не опублікований.",
+        "helixprimus": "Демо із синтетичними даними та mock AI/delivery. Вихідний код нижче; live demo може бути недоступним.",
+        "astrasynq": "Доступ до workspace може потребувати запрошення. Render demo може запускатися із затримкою; вихідний код нижче.",
+        "drivefix": "Доказ: демо редизайну на Pages. GitHub нижче містить також legacy; це не підтвердження роботи Cloudflare backend.",
+        "smartsave": "Вітрина beta/RC. Публічний кейс, роль автора та звіт live-приймання ще не наведені; запуск бота не пропонується."
+    },
+    "ru": {
+        "skip": "К содержимому",
+        "navigation": "Основная навигация",
+        "telegram": "Написать в Telegram",
+        "email": "Написать на email",
+        "resume": "Резюме",
+        "manor": "Публичный обзор: сайт записи. CRM требует доступа; кейс и роль автора ещё не опубликованы.",
+        "shopflow": "Посмотрите демо и исходный код ниже. Краткое описание личного вклада ещё не опубликовано.",
+        "helixprimus": "Демо с синтетическими данными и mock AI/delivery. Исходный код ниже; live demo может быть недоступно.",
+        "astrasynq": "Доступ к workspace может требовать приглашения. Render demo может запускаться с задержкой; исходный код ниже.",
+        "drivefix": "Доказательство: демо редизайна на Pages. GitHub ниже содержит также legacy; это не подтверждение работы Cloudflare backend.",
+        "smartsave": "Витрина beta/RC. Публичный кейс, роль автора и отчёт live-приёмки ещё не приведены; запуск бота не предлагается."
+    },
+    "en": {
+        "skip": "Skip to content",
+        "navigation": "Main navigation",
+        "telegram": "Message on Telegram",
+        "email": "Send an email",
+        "resume": "Resume",
+        "manor": "Public preview: booking website. CRM requires access; a case study and author role are not published yet.",
+        "shopflow": "Explore the demo and source below. A summary of personal contribution is not published yet.",
+        "helixprimus": "Synthetic-data demo with mock AI/delivery. Source is linked below; the live demo may be unavailable.",
+        "astrasynq": "Workspace access may require an invitation. The Render demo may take time to start; source is linked below.",
+        "drivefix": "Evidence: the redesign demo on Pages. GitHub below also contains legacy code; it does not verify the Cloudflare backend.",
+        "smartsave": "Beta/RC showcase. A public case study, author role and live acceptance report are not linked yet; no bot launch is offered."
+    }
+};
+Object.keys(stage1Translations).forEach(language => { translations[language].stage1 = stage1Translations[language]; });
+
 function getTranslation(language, path) {
     return path
         .split(".")
@@ -1073,6 +1117,15 @@ function applyLanguage(language) {
         translations[language]
             ? language
             : "ua";
+
+    renderPublicContacts(selectedLanguage);
+
+    document.querySelectorAll(".project a").forEach(link => {
+        const name = link.closest(".project").querySelector("h3").textContent;
+        const source = link.href.startsWith("https://github.com/");
+        const label = source ? {ua: "Вихідний код", ru: "Исходный код", en: "Source code"} : {ua: "Відкрити демо", ru: "Открыть демо", en: "Open demo"};
+        link.setAttribute("aria-label", name + " — " + label[selectedLanguage]);
+    });
 
     const htmlLanguage =
         selectedLanguage === "ua"
@@ -1916,6 +1969,7 @@ function createFireflyField() {
 
 
     function animate(time) {
+        if (reducedMotion.matches) { animationFrame = 0; return; }
 
         const delta =
             Math.min(
@@ -1980,7 +2034,7 @@ function createFireflyField() {
 
     function handleVisibility() {
 
-        if (document.hidden) {
+        if (document.hidden || reducedMotion.matches) {
 
             cancelAnimationFrame(
                 animationFrame
@@ -2000,6 +2054,8 @@ function createFireflyField() {
         }
     }
 
+
+    reducedMotion.addEventListener("change", handleVisibility);
 
     resizeCanvas();
 
@@ -2042,3 +2098,45 @@ function createFireflyField() {
 
 createFireflyField();
 
+
+// Public contact links are generated only from explicitly approved, validated entries.
+function renderPublicContacts(language) {
+    const profile = window.PUBLIC_PROFILE || {};
+    const links = [];
+    const telegram = profile.telegram || {};
+    if (telegram.approvedForPublication === true && /^[A-Za-z][A-Za-z0-9_]{4,31}$/.test(telegram.username || "")) {
+        links.push(["telegram", "https://t.me/" + telegram.username, "@" + telegram.username]);
+    }
+    const email = profile.email || {};
+    if (email.approvedForPublication === true && /^[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+$/.test(email.address || "")) {
+        links.push(["email", "mailto:" + encodeURIComponent(email.address), email.address]);
+    }
+    const resume = profile.resume || {};
+    if (resume.approvedForPublication === true && resume.url) {
+        try {
+            const url = new URL(resume.url);
+            if (url.protocol === "https:" && !url.username && !url.password) links.push(["resume", url.href, ""]);
+        } catch (_) { /* Missing or malformed resume stays hidden. */ }
+    }
+    document.querySelectorAll("[data-public-contact]").forEach(container => {
+        container.replaceChildren();
+        links.forEach(([key, href, detail]) => {
+            const link = document.createElement("a");
+            link.className = "contact-cta";
+            link.href = href;
+            link.textContent = getTranslation(language, "stage1." + key) + (detail ? " · " + detail : " ↗");
+            if (href.startsWith("https:")) { link.target = "_blank"; link.rel = "noopener noreferrer"; }
+            container.append(link);
+        });
+        container.hidden = links.length === 0;
+    });
+}
+
+// Keyboard opening places focus in navigation; Escape already restores the trigger.
+menuButton.addEventListener("click", event => {
+    if (event.detail === 0 && nav.classList.contains("active")) nav.querySelector("a").focus();
+});
+nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+    const target = document.querySelector(link.getAttribute("href"));
+    if (target) { target.tabIndex = -1; target.focus({ preventScroll: true }); }
+}));
