@@ -397,8 +397,8 @@ img {
 }
 
 .reveal {
-    opacity: 0;
-    transform: translateY(45px);
+    opacity: 1;
+    transform: none;
     transition: opacity 0.8s ease, transform 0.8s cubic-bezier(.2, .7, .2, 1);
 }
 
@@ -561,11 +561,16 @@ img {
 }
 
 .project-image img {
+    opacity: 1;
+    visibility: visible;
+}
+
+.motion-ready .project-image img {
     opacity: 0;
     visibility: hidden;
 }
 
-.project-image img.is-loaded {
+.motion-ready .project-image img.is-loaded {
     opacity: 1;
     visibility: visible;
 }
