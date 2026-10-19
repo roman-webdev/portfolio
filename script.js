@@ -1106,6 +1106,14 @@ const stage1Translations = {
 };
 Object.keys(stage1Translations).forEach(language => { translations[language].stage1 = stage1Translations[language]; });
 
+// CV links live outside data-public-contact: contact rendering clears its containers.
+const cvTranslations = {
+    ua: { group: "Завантажити CV", en: "Завантажити CV — EN", ua: "Завантажити CV — UA" },
+    ru: { group: "Скачать CV", en: "Скачать CV — EN", ua: "Скачать CV — UA" },
+    en: { group: "Download CV", en: "Download CV — EN", ua: "Download CV — UA" }
+};
+for (const language of ["ua", "ru", "en"]) translations[language].cv = cvTranslations[language];
+
 function getTranslation(language, path) {
     return path
         .split(".")
