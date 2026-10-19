@@ -2672,6 +2672,9 @@ main {
 .language-switcher button.is-active::after { bottom: 3px; }
 .public-contact-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; position: relative; z-index: 2; }
 .contact-cta { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; max-width: 100%; padding: 12px 18px; border: 1px solid #d8ff3e; border-radius: 999px; background: #d8ff3e; color: #101010; font-size: 14px; line-height: 22px; font-weight: 700; white-space: nowrap; }
+.cv-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; position: relative; z-index: 2; }
+.cv-actions .contact-cta { background: transparent; color: #d8ff3e; white-space: normal; text-align: center; }
+.cv-actions .contact-cta:hover { background: #d8ff3e; border-color: #d8ff3e; color: #101010; }
 .contact-cta-icon { flex: 0 0 18px; }
 .contact-cta:focus-visible { outline: 3px solid #f1eee8; outline-offset: 5px; }
 .contact-cta:hover { background: #f1eee8; border-color: #f1eee8; color: #101010; }
